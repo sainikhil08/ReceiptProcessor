@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.receipt_processor</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>ReceiptProcessor</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Receipt Processor</name>
 	<description>Receipt Processor</description>
