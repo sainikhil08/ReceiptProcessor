@@ -39,45 +39,43 @@ public class Receipt {
         this.id = id;
     }
 
-    public @NotBlank(message = "Retailer is required") @Pattern(regexp = "^[\\w\\s\\-&]+$", message = "Retailer name can only contain letters, numbers, spaces, dashes, and ampersands") String getRetailer() {
+    public String getRetailer() {
         return retailer;
     }
 
-    public void setRetailer(@NotBlank(message = "Retailer is required") @Pattern(regexp = "^[\\w\\s\\-&]+$", message = "Retailer name can only contain letters, numbers, spaces, dashes, and ampersands") String retailer) {
+    public void setRetailer(String retailer) {
         this.retailer = retailer;
     }
 
-    public @NotNull(message = "Purchase date is required") LocalDate getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(@NotNull(message = "Purchase date is required") LocalDate purchaseDate) {
+    public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 
-    public @NotNull(message = "Purchase time is required") LocalTime getPurchaseTime() {
+    public LocalTime getPurchaseTime() {
         return purchaseTime;
     }
 
-    public void setPurchaseTime(@NotNull(message = "Purchase time is required") LocalTime purchaseTime) {
+    public void setPurchaseTime(LocalTime purchaseTime) {
         this.purchaseTime = purchaseTime;
     }
 
-    public @NotEmpty(message = "Receipt must have at least one item") @Size(min = 1, message = "At least one item is required")
-    List<Item> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
-    public void setItems(@NotEmpty(message = "Receipt must have at least one item") @Size(min = 1, message = "At least one item is required") List<Item> items) {
+    public void setItems(List<Item> items) {
         this.items = items;
     }
 
-    public @NotNull(message = "Total is required") @DecimalMin(value = "0.00", inclusive = false, message = "Total must be greater than zero") @Digits(integer = 10, fraction = 2, message = "Total must be a valid decimal with up to two digits after the decimal point")
-    Double getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(@NotNull(message = "Total is required") @DecimalMin(value = "0.00", inclusive = false, message = "Total must be greater than zero") @Digits(integer = 10, fraction = 2, message = "Total must be a valid decimal with up to two digits after the decimal point") Double total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 }
