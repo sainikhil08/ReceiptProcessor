@@ -21,12 +21,6 @@ public class ReceiptController {
         this.receiptService = receiptService;
     }
 
-    @GetMapping("/")
-    @ResponseBody
-    public String show(){
-        return "Hello";
-    }
-
     @PostMapping("/process")
     public ResponseEntity<Map<String, Object>> addReceipt(@Valid @RequestBody Receipt receipt, BindingResult result) {
         Map<String,Object> response = new HashMap<>();
